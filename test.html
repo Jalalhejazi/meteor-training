@@ -6,18 +6,12 @@
 	 <div class="jumbotron">
 	 		<div class="container">
 	 			<h1>realtime webapp</h1>
-	 			<p><code>
-	 				git checkout 03_mongodb_data_show
-	 			</code></p>
 	 			<p>
-	 				{{> posts}}
+	 				<code>
+	 					git checkout 03_mongodb_data_show
+	 				</code>
 	 			</p>
-	 			<p>
-	 				{{> kurser}}
-	 			</p>
-	 			<p>
-					{{> elever}}
-	 			</p>
+	 			
 	 				
 	 		</div>
 	 	</div>	
@@ -29,12 +23,15 @@
 
 	<div class="jumbotron ">
 		<div class="template blue">
+			{{> posts}}
 			{{> test01 }}
 		</div>
 		<div class="template green">
+			{{> kurser}}
 			{{> test02 }}
 		</div>
 		<div class="template yellow">
+			{{> elever}}
 			{{> test03 }}
 		</div>
 	</div>
