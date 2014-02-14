@@ -1,8 +1,13 @@
  posts = new Meteor.Collection('posts');
  kurser = new Meteor.Collection('kurser');
+ elever = new Meteor.Collection('elever');
 
 
  if (Meteor.isClient) {
+
+     Template.elever.count = function() {
+         return elever.find().count();
+     };
 
      Template.posts.count = function() {
          return posts.find().count();
@@ -58,6 +63,20 @@
          kurser.insert({
              title: 'new kursus 03 from server-side',
              adresse: 'KBG'
+         });
+
+     };
+
+     if (elever.find().count() === 0) {
+         elever.insert({
+             navn: 'David'
+         });
+
+         elever.insert({
+             navn: 'Jacob',
+         });
+         elever.insert({
+             navn: 'Newton'
          });
 
      };
