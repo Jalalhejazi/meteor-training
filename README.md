@@ -33,6 +33,30 @@ forklaring stammer fra http://jalal.meteor.com/#structuringyourapp
 
 
 
+## Debug med node-inspector 
+
+setup node-inspector for første gang: 
+
+	> npm install -g node-inspector
+
+start node-inspector --help
+
+	> node-inspector --web-port=9000
+
+	Node Inspector v0.7.0-2
+   	info  - socket.io started
+	Visit http://127.0.0.1:9000/debug?port=5858 to start debugging.
+
+
+start meteor with debug 
+
+	> NODE_OPTIONS='--debug' meteor run 
+
+
+
+
+
+
 
 
 	
