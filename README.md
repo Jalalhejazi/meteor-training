@@ -2,40 +2,34 @@ meteor-training
 ===============
 
 
-	> git checkout 03_mongodb_data_show
+	> git checkout 04_multiPages
+
+To reset your mongodb run this code
+
+	> meteor reset
 
 
-## start mongodb
-	
-	> meteor run
+## Multi Page App - structure
 
-mens meteor er i run mode start mongodb med en anden terminal med command
+Single Page App eller Multi Page App begge muligheder er op til udvikleren i meteor app. 
 
-	> meteor mongo
+jeg har valgt at brug Multi Page App vha. client/lib/router.js
 
-mongodb commands du har har brug for
-	
-	meteor:PRIMARY> help			// alt hvad du har brug for er i help
-	
-	meteor:PRIMARY> cls             // clear 
+alle kode der hører til browseren er under mappen /client
 
-	meteor:PRIMARY> show collections
+alle kode der hører til serveren er under mappen /server
 
-	meteor:PRIMARY> db.kurser.find()
+alle kode der hører til databasen er under mappen /Model
 
-	meteor:PRIMARY> db.kurser.find().count()
+forklaring stammer fra http://jalal.meteor.com/#structuringyourapp
 
-	meteor:PRIMARY> db.kurser.findOne({ "title" : "new kursus 01 from server-side"}) 
+* Files in directories named lib are loaded first.
 
-	meteor:PRIMARY> db.kurser.insert({test:'nyt kursus på vej'})
+* Files that match main.* are loaded after everything else.
 
-	meteor:PRIMARY> var ID = db.kurser.findOne({title:'nyt kursus på vej'})._id
-	
-	meteor:PRIMARY> db.kurser.remove(ID)  // sletter kursus med ID 
+* Files in subdirectories are loaded before files in parent directories, so that files in the deepest subdirectory are loaded first (after lib), and files in the root directory are loaded last (other than main.*).
 
-	meteor:PRIMARY> ID                    // forventer null   
-
-	meteor:PRIMARY> ctrl + c              // exit mongo-terminal 
+* Within a directory, files are loaded in alphabetical order by filename.
 
 
 
