@@ -18,4 +18,7 @@ Send an HTTP GET request. Equivalent to HTTP.call("GET", ...).
 	> meteor add http
 
 
+## /Server/fixtures.js 
+
+Med Server-side HTTP.get() hentes data fra servicen ved opstart kun første gang. 
 
