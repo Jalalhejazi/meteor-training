@@ -4,3 +4,7 @@
 
 
 kurser = new Meteor.Collection('kurser');
+
+// opgaver-data stammer fra //rest.supermobile.dk/opgaver.json
+// vi ønsker at gemme data fra remote service til local mongodb
+opgaver = new Meteor.Collection('opgaver');
