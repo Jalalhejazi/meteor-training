@@ -2,19 +2,16 @@
 		<div class="container">
 	    <div class="jumbotron">
 	        <div class="container">
-				<h1 class="text-center">kurser</h1>	            
+				<h1 class="text-center">Alle mine kurser</h1>	            
 	        </div>
 	    </div>
 	</div>
 
 
 	<div class="container">
-			{{#each kurser}}
+			{{#each kursus}}
 					<li>
-						<a href='{{url}}' target="_black" >
-							{{title}}
-						</a>
-						
+						{{kursus_titel}}
 					</li>
 			{{/each}}	
 	</div>
