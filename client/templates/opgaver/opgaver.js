@@ -12,12 +12,7 @@
 
   Template.opgaverTemplate.opgave = function() {
 
-      hentMineOpgaverFraService(config)
-
-      .done(function(response) {
-          Session.set(config.sessionKey, response.opgaver);
-          mongodb_opgaver_insert(response.opgaver)
-      });
+      hentMineOpgaverFraService(config);
 
       return config.getSession();
 
@@ -25,7 +20,19 @@
 
    // send ajax request og returnere promise object
   var hentMineOpgaverFraService = function(config) {
-      return $.ajax(config);
+
+      // On the client, 
+      // HTTP.get() must be used asynchronously by passing a callback.
+
+      HTTP.get(config.url, function(error, success) {
+          console.log("HTTP.get onSuccess> ");
+          console.dir(success.data.opgaver);
+
+          Session.set(config.sessionKey, success.data.opgaver);
+          mongodb_opgaver_insert(success.data.opgaver)
+
+      });
+
   };
 
 

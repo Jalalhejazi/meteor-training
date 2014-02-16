@@ -2,30 +2,20 @@ meteor-training
 ===============
 
 
-	> git checkout 05_remote_services_ajax
+	> git checkout 06_ajax_with_HTTP
 
 
-## remote service via ajax to local mongodb
+## remote service via HTTP
 
-I denne checkout ønsker jeg at læse data fra remote service
+med denne branch ønsker vi at brug HTTP.get() i stedet for jQuery.ajax()
 
-//rest.supermobile.dk/opgaver.json
-og gemme alle opgaver i mongodb. 
+http://jalal.meteor.com/#http_call
 
-Dette proof Of Concept bruges til at aflaste produktion servere fra trafikken 
+Send an HTTP GET request. Equivalent to HTTP.call("GET", ...).
 
-og gemme de data der ønskes i webApp 
-et andet sted som er tilgængeligt, 
+## setup ny komponent til din webapp
 
-for nu i mongodb samme sted som app har adgang til. 
-
-mongodb virker som en form for caching til webapp.   
+	> meteor add http
 
 
 
-
-
-
-
-	
-	
