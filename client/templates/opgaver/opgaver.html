@@ -4,26 +4,36 @@
         <div class="jumbotron">
             <div class="container">
                 <h1 class="text-center">{{title}}</h1>
-
-
-
             </div>
         </div>
     </div>
 
 
     <div class="container">
-		<code>
-		data stammer fra //rest.supermobile.dk/opgaver.json
-		</code>
+        <code>
+            data stammer fra //rest.supermobile.dk/opgaver.json
+        </code>
+        <br>
+        <br>
+    </div>
 
-        {{#each opgave}}
-	        <h1>
-	            <span class="label label-default">
-	                {{todo}}
-	            </span>
-	        </h1>
-        {{/each}}
+
+    <div class="container">
+        <div class="table-responsive">
+            <table class="table table-condensed table-hover table-striped">
+
+                <tbody>
+                    {{#each opgave}}
+                    <tr>
+                        <td class="blue">
+                            {{todo}}
+                        </td>
+                    </tr>
+                     {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
     </div>
 
 
