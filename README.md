@@ -2,56 +2,24 @@ meteor-training
 ===============
 
 
-	> git checkout 04_multiPages
-
-To reset your mongodb run this code
-
-	> meteor reset
+	> git checkout 05_remote_services_ajax
 
 
-## Multi Page App - structure
+## remote service via ajax to local mongodb
 
-Single Page App eller Multi Page App begge muligheder er op til udvikleren i meteor app. 
+I denne checkout ønsker jeg at læse data fra remote service
 
-jeg har valgt at brug Multi Page App vha. client/lib/router.js
+//rest.supermobile.dk/opgaver.json
+og gemme alle opgaver i mongodb. 
 
-alle kode der hører til browseren er under mappen /client
+Dette proof Of Concept bruges til at aflaste produktion servere fra trafikken 
 
-alle kode der hører til serveren er under mappen /server
+og gemme de data der ønskes i webApp 
+et andet sted som er tilgængeligt, 
 
-alle kode der hører til databasen er under mappen /Model
+for nu i mongodb samme sted som app har adgang til. 
 
-forklaring stammer fra http://jalal.meteor.com/#structuringyourapp
-
-* Files in directories named lib are loaded first.
-
-* Files that match main.* are loaded after everything else.
-
-* Files in subdirectories are loaded before files in parent directories, so that files in the deepest subdirectory are loaded first (after lib), and files in the root directory are loaded last (other than main.*).
-
-* Within a directory, files are loaded in alphabetical order by filename.
-
-
-
-## Debug med node-inspector 
-
-setup node-inspector for første gang: 
-
-	> npm install -g node-inspector
-
-start node-inspector --help
-
-	> node-inspector --web-port=9000
-
-	Node Inspector v0.7.0-2
-   	info  - socket.io started
-	Visit http://127.0.0.1:9000/debug?port=5858 to start debugging.
-
-
-start meteor with debug 
-
-	> NODE_OPTIONS='--debug' meteor run 
-
+mongodb virker som en form for caching til webapp.   
 
 
 
