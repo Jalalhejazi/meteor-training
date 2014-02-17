@@ -8,6 +8,8 @@ if (Meteor.isClient) {
         Router.addRoute('/home', 'homeTemplate');
         Router.addRoute('/opgaver', 'opgaverTemplate');
         Router.addRoute('/kurser', 'kurserTemplate');
+        Router.addRoute('/jQuery', 'jQueryTemplate');
+
 
         Router.run();
     });
