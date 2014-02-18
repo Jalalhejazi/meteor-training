@@ -14,7 +14,7 @@ if (opgaver.find().count() === 0) {
         // underscore.js  _.map() -> svarer til Foreach() loop
 
         _.map(success.data.opgaver, function(opgaven) {
-            console.log("Første gang fixtures.js> HTTP.get from rest.supermobile.dk/opgaver > onSuccess> " + opgaven.todo);
+            console.log("Første gang fixtures.js> HTTP.get() from rest.supermobile.dk/opgaver > onSuccess> " + opgaven.todo);
 
             //sende hele opgaven til mongodb as-is  :-) 
             opgaver.insert(opgaven);
